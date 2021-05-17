@@ -1,3 +1,5 @@
+import random
+
 from fleet import Fleet
 from herd import Herd
 
@@ -11,6 +13,7 @@ class Battlefield:
         self.display_welcome()
         self.user_side = self.pick_robo_or_dino
         self.battle()
+        self.display_winner
 
     def display_welcome(self):
         print("Welcome to Dinosaurs vs Robots!")
@@ -27,9 +30,16 @@ class Battlefield:
             print("Invalid input. Please try again. Hint...remember to only use keys 1 or 2")
             self.pick_robo_or_dino()
 
-
     def battle(self):
-        pass
+        first_turn = random.randint(1, 2)
+        if first_turn == 1:
+            print("Dinosaurs get to go first!")
+            first_turn = 1
+
+        if first_turn == 2:
+            print("Robots get to go first!")
+            first_turn = 2
+
 
     def dino_turn(self):
         pass
