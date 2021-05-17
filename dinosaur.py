@@ -21,6 +21,6 @@ class Dinosaur:
             print(f'Rawr! {self.type} attacked {robot_being_attacked} by {self.attack_type[2]}')
 
         self.energy -= 10
-        robot_being_attacked -= self.attack_type
+        robot_being_attacked.health -= self.attack_type
 
 
